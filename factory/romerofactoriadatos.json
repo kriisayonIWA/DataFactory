@@ -1,0 +1,9 @@
+{
+	"name": "romerofactoriadatos",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "046e17b6-3d4f-4ebe-8c76-b5cdd114a013",
+		"tenantId": "a3f744ca-70b5-42af-baf8-a7fb42fe7706"
+	}
+}

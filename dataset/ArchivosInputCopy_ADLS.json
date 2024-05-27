@@ -1,0 +1,42 @@
+{
+	"name": "ArchivosInputCopy_ADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkContenedorADLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"NombreArchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().NombreArchivo",
+					"type": "Expression"
+				},
+				"folderPath": "input",
+				"fileSystem": "romerocontenedor"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Cod_Categoria",
+				"type": "String"
+			},
+			{
+				"name": "Nombre",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
